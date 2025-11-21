@@ -1,13 +1,28 @@
-<!-- src/views/KanbanBoard.vue -->
 <template>
-  <div class="max-w-5xl mx-auto p-6">
-    <h1 class="text-3xl font-bold mb-4 text-green-600">Kanban Board</h1>
-    <p class="text-gray-600 mb-6">Meal planning board placeholder (drag/drop optional)</p>
+  <div class="max-w-6xl mx-auto p-6">
+    <h1 class="text-4xl font-bold mb-6 text-green-600">Meal Planning Board</h1>
+    <p class="text-gray-600 mb-6">Organize your meals for the week</p>
 
-    <div class="grid grid-cols-3 gap-4">
-      <div class="bg-white p-4 rounded shadow">To-Do</div>
-      <div class="bg-white p-4 rounded shadow">In Progress</div>
-      <div class="bg-white p-4 rounded shadow">Done</div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-white rounded-lg shadow p-4 hover:shadow-lg transition">
+        <h2 class="font-semibold text-xl mb-2">To-Do</h2>
+        <ul class="space-y-2">
+          <li class="bg-green-50 p-2 rounded">Breakfast: Oatmeal</li>
+          <li class="bg-green-50 p-2 rounded">Lunch: Salad</li>
+        </ul>
+      </div>
+      <div class="bg-white rounded-lg shadow p-4 hover:shadow-lg transition">
+        <h2 class="font-semibold text-xl mb-2">In Progress</h2>
+        <ul class="space-y-2">
+          <li class="bg-yellow-50 p-2 rounded">Dinner: Rice & Veggies</li>
+        </ul>
+      </div>
+      <div class="bg-white rounded-lg shadow p-4 hover:shadow-lg transition">
+        <h2 class="font-semibold text-xl mb-2">Done</h2>
+        <ul class="space-y-2">
+          <li class="bg-gray-100 p-2 rounded">Snack: Fruits</li>
+        </ul>
+      </div>
     </div>
   </div>
 </template>
