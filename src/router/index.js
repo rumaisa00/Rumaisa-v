@@ -1,21 +1,21 @@
-import { createRouter, createWebHashHistory } from "vue-router";
-import Home from "../views/Home.vue";
-import Calendar from "../views/Calendar.vue";
-import KanbanBoard from "../views/KanbanBoard.vue";
-import MealsList from "../views/MealsList.vue";
-import MealDetail from "../views/MealDetail.vue";
+import { createRouter, createWebHistory } from "vue-router";
+import Home from "../components/Home.vue";
+import Calendar from "../components/Calendar.vue";
+import Kanban from "../components/Kanban.vue";
+import MealsList from "../components/MealsList.vue";
+import MealDetail from "../components/MealDetail.vue";
 
 const routes = [
-  { path: "/", name: "Home", component: Home },
-  { path: "/calendar", name: "Calendar", component: Calendar },
-  { path: "/kanban", name: "KanbanBoard", component: KanbanBoard },
-  { path: "/meals", name: "MealsList", component: MealsList },
-  { path: "/meal/:id", name: "MealDetail", component: MealDetail },
+  { path: "/", component: Home },
+  { path: "/calendar", component: Calendar },
+  { path: "/kanban", component: Kanban },
+  { path: "/meals", component: MealsList },
+  { path: "/meal/:id", component: MealDetail } // optional dynamic route
 ];
 
 const router = createRouter({
-  history: createWebHashHistory(),
-  routes,
+  history: createWebHistory("/Rumaisa-v/"), // important for GitHub Pages
+  routes
 });
 
 export default router;
